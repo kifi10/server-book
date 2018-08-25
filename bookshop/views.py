@@ -118,7 +118,7 @@ def bookDetail(request):
             resp['info']='idbook is not found'
             return HttpResponse(json.dumps(resp),status=404)
         resp={}
-        ##查询BookPrice数据库表，获得书的价格1
+        ##查询BookPrice数据库表，获得书的价格2
         if BookPrice.objects.filter(idbook=Myidbook).exists():
             MyBookPriceOB =BookPrice.objects.filter(idbook=Myidbook).values('bookprice')
             MyBookPrice=MyBookPriceOB[0]['bookprice']
