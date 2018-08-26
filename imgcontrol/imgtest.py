@@ -7,10 +7,10 @@ import sys
 from django.contrib.sessions import exceptions
 
 
-def PhotoSave(photo,path,idbook):
+def PhotoSave(photoDB,path,idbook):
+    photo=Image.open(photoDB)
     try:
-        ss=photo.name.split('.')
-        PhotoFormat=photo.name.split('.')[1]
+        PhotoFormat=photo.format
     except IndexError:
         return ''
     Nowtime=datetime.now()
