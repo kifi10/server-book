@@ -22,6 +22,7 @@ from django.conf import settings
 from imgcontrol import views as imgcontrol_views
 urlpatterns = [
     url(r'^showimg/$', imgcontrol_views.showimg),
+    url(r'^upload/$', imgcontrol_views.upload),
 
 ]
               #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
